@@ -28,6 +28,10 @@ The [skills CLI](https://github.com/vercel-labs/skills) installs the skills for 
 
 Run `/plugin marketplace update cxjs` to pull new versions.
 
+### Cursor plugin
+
+In Cursor, open **Customize**, add `https://github.com/codaxy/cxjs-skills` as a plugin source from GitHub, then install the `cxjs` plugin for your project or user. The plugin includes both skills.
+
 ### Manual
 
 Copy the folder of the skill you want into the location your agent reads:

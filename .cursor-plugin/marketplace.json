@@ -1,0 +1,16 @@
+{
+  "name": "cxjs",
+  "owner": {
+    "name": "Codaxy"
+  },
+  "metadata": {
+    "description": "Agent skills for building applications with CxJS"
+  },
+  "plugins": [
+    {
+      "name": "cxjs",
+      "source": "./",
+      "description": "Write, review and debug CxJS code, and build diagrams with cx-diagrams"
+    }
+  ]
+}

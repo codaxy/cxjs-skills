@@ -1,0 +1,11 @@
+{
+  "name": "cxjs",
+  "description": "Write, review and debug CxJS code, and build diagrams with cx-diagrams",
+  "author": {
+    "name": "Codaxy"
+  },
+  "homepage": "https://github.com/codaxy/cxjs-skills",
+  "repository": "https://github.com/codaxy/cxjs-skills",
+  "license": "MIT",
+  "keywords": ["cxjs", "typescript", "frontend", "diagrams"]
+}
