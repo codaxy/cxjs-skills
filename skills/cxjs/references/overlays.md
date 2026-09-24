@@ -27,26 +27,24 @@ The window sits in the view and its `visible` is bound to the store:
 
 ### Closing a window from code
 
-Everything inside a window receives its `dismiss` function through `parentOptions` — this works for declared windows and for windows opened from code alike. A controller inside the window closes it once its work is done:
+A window passes its `dismiss` function through `parentOptions` — this works for declared windows and for windows opened from code alike. A controller on the window closes it once its work is done:
 
 ```tsx
-<Window title="Edit order" visible={m.editor.visible} center modal>
-  <div controller={EditorController}>
-    …
-    <Button text="Save" mod="primary" onClick={(e, instance) => instance.getControllerByType(EditorController).onSave()} />
-  </div>
+<Window title="Edit order" visible={m.editor.visible} center modal controller={EditorController}>
+  …
+  <Button text="Save" mod="primary" onClick={(e, instance) => instance.getControllerByType(EditorController).onSave()} />
 </Window>
 ```
 
 ```ts
-// EditorController — attached inside the window
+// EditorController
 async onSave() {
   await saveOrder(this.store.get(m.order));
   this.instance.parentOptions.dismiss();
 }
 ```
 
-- Attach the controller to an element **inside** the window, not to the `Window` itself. The window hands `dismiss` down to its children; its own instance receives the options of whatever is outside it.
+- Before `cx` 26.9.3 a controller attached to the `Window` itself did not receive `dismiss`; in projects on an older version, attach the controller to an element inside the window instead.
 - An event handler inside the window can do the same: `onClick={(e, instance) => instance.parentOptions.dismiss()}`.
 
 **Wrapping a window in a functional component: do not call the prop `visible`.** A functional component strips `visible` and applies it to its own wrapper, so the window inside never receives the binding and cannot close itself. Use another name — `shown`, `active` — and pass it on:
