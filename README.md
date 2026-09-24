@@ -5,8 +5,7 @@ Agent skills for building applications with [CxJS](https://cxjs.io) — for Clau
 | Skill | Use it for |
 | --- | --- |
 | [`cxjs`](skills/cxjs/SKILL.md) | Writing, reviewing and debugging CxJS code: typed models, store and bindings, controllers, widgets, forms, grids, charts, routing and theming |
-
-A skill for [`cx-diagrams`](https://github.com/codaxy/cx-diagrams) is in preparation.
+| [`cxjs-diagrams`](skills/cxjs-diagrams/SKILL.md) | Node-and-edge diagrams with [`cx-diagrams`](https://github.com/codaxy/cx-diagrams): layout on a grid, shapes and lines, zoom and pan, selection, drag & drop, diagrams built from data |
 
 Skills are plain folders (`SKILL.md` + `references/`). Agents load the short description up front and read the rest only when a task needs it.
 
