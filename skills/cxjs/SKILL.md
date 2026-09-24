@@ -13,7 +13,7 @@ Most mistakes come from treating it like React: a hook has nowhere to live, a va
 
 Work through these in order and stop as soon as you have the answer.
 
-1. **The project itself.** A project skill, `AGENTS.md`, or the code around the change. Its conventions win over this skill; do not migrate an existing codebase to a different style unless asked.
+1. **The project itself** — its own documented conventions and the code around the change. They win over this skill; do not migrate an existing codebase to a different style unless asked.
 2. **This skill and its references.** Conventions and pitfalls that the documentation does not spell out.
 3. **The documentation** — concepts, widget usage, and working examples. Every page is available as Markdown at `https://cxjs.io/docs/<section>/<page>.md`; `https://cxjs.io/llms.txt` indexes all of them.
 4. **The source** — only when you need **exact typing** or an **internal mechanism** the documentation does not cover. The `cx` package ships its TypeScript source, so it is always at hand and always matches the installed version:

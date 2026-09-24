@@ -41,11 +41,7 @@ Copy the folder of the skill you want into the location your agent reads:
 
 Committing the skill into your project repository makes it available to everyone on the team, whichever agent they use.
 
-## Project skills
-
-The skills here cover CxJS itself. Every application also has its own conventions — shared components, API client, routing helpers, design tokens. Capture those in a project skill that lives in the application's repository; the `cxjs` skill defers to it wherever they differ.
-
-Start from [`templates/project-skill.md`](templates/project-skill.md): copy it to `.agents/skills/<app-name>/SKILL.md` or `.claude/skills/<app-name>/SKILL.md` in your application and fill it in.
+The skills here cover CxJS itself. Where an application has its own conventions, the `cxjs` skill tells the agent to follow them.
 
 ## Contributing
 

@@ -22,7 +22,7 @@ Open an issue with:
 - **Code snippets must compile** against the current `cx` release.
 - **Link documentation pages in their Markdown form** — `https://cxjs.io/docs/tables/grid.md`, not `https://cxjs.io/docs/tables/grid` — so agents fetch clean text instead of HTML.
 - **Stay tool-neutral.** Do not name tools of a specific agent; say "read `node_modules/cx/src/...`", not "use the Read tool".
-- **Framework, not application.** Conventions specific to one app belong in that app's project skill, not here.
+- **Framework, not application.** Conventions specific to one app belong in that app's repository, not here.
 
 ## Pull requests
 
