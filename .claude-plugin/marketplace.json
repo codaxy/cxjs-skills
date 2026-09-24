@@ -1,0 +1,18 @@
+{
+  "name": "cxjs",
+  "owner": {
+    "name": "Codaxy",
+    "url": "https://cxjs.io"
+  },
+  "description": "Agent skills for building applications with CxJS",
+  "plugins": [
+    {
+      "name": "cxjs",
+      "source": "./",
+      "description": "Write, review and debug CxJS code: typed models, store and bindings, controllers, widgets, forms, grids, charts, routing and theming",
+      "license": "MIT",
+      "homepage": "https://github.com/codaxy/cxjs-skills",
+      "keywords": ["cxjs", "typescript", "frontend"]
+    }
+  ]
+}

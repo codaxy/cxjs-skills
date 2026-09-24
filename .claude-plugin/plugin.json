@@ -1,0 +1,12 @@
+{
+  "name": "cxjs",
+  "description": "Write, review and debug CxJS code: typed models, store and bindings, controllers, widgets, forms, grids, charts, routing and theming",
+  "author": {
+    "name": "Codaxy",
+    "url": "https://cxjs.io"
+  },
+  "homepage": "https://github.com/codaxy/cxjs-skills",
+  "repository": "https://github.com/codaxy/cxjs-skills",
+  "license": "MIT",
+  "keywords": ["cxjs", "typescript", "frontend"]
+}

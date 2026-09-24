@@ -1,0 +1,56 @@
+# CxJS Skills
+
+Agent skills for building applications with [CxJS](https://cxjs.io) — for Claude Code, Cursor, Codex, and any other agent that reads `SKILL.md`.
+
+| Skill | Use it for |
+| --- | --- |
+| [`cxjs`](skills/cxjs/SKILL.md) | Writing, reviewing and debugging CxJS code: typed models, store and bindings, controllers, widgets, forms, grids, charts, routing and theming |
+
+A skill for [`cx-diagrams`](https://github.com/codaxy/cx-diagrams) is in preparation.
+
+Skills are plain folders (`SKILL.md` + `references/`). Agents load the short description up front and read the rest only when a task needs it.
+
+## Installation
+
+### Any agent
+
+```bash
+npx skills add codaxy/cxjs-skills
+```
+
+The [skills CLI](https://github.com/vercel-labs/skills) installs the skills for the agents you choose (Claude Code, Cursor, Codex, …). Add `-g` to install for your user instead of the current project, and run `npx skills update` to pull new versions.
+
+### Claude Code plugin
+
+```
+/plugin marketplace add codaxy/cxjs-skills
+/plugin install cxjs@cxjs
+```
+
+Run `/plugin marketplace update cxjs` to pull new versions.
+
+### Manual
+
+Copy the folder of the skill you want into the location your agent reads:
+
+| Agent | Project | User |
+| --- | --- | --- |
+| Claude Code | `.claude/skills/<name>/` | `~/.claude/skills/<name>/` |
+| Cursor | `.agents/skills/<name>/` or `.cursor/skills/<name>/` | `~/.cursor/skills/<name>/` |
+| Codex | `.agents/skills/<name>/` | `~/.agents/skills/<name>/` |
+
+Committing the skill into your project repository makes it available to everyone on the team, whichever agent they use.
+
+## Project skills
+
+The skills here cover CxJS itself. Every application also has its own conventions — shared components, API client, routing helpers, design tokens. Capture those in a project skill that lives in the application's repository; the `cxjs` skill defers to it wherever they differ.
+
+Start from [`templates/project-skill.md`](templates/project-skill.md): copy it to `.agents/skills/<app-name>/SKILL.md` or `.claude/skills/<app-name>/SKILL.md` in your application and fill it in.
+
+## Contributing
+
+Found the agent doing something wrong, or know a pattern worth teaching? See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+[MIT](LICENSE)
