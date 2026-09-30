@@ -97,6 +97,18 @@ export default class extends Controller {
 }
 ```
 
+Because a page's data is kept in `pages` when the user leaves, the controller runs again on an existing `$page` when they come back. Seed it with `store.init`, which only writes values that are still `undefined`:
+
+```ts
+onInit() {
+  this.store.init(m.$page.filter, { status: "open" });
+  this.store.init(m.$page.page, 1);
+  this.addTrigger("load", [m.$page.filter, m.$page.page], (filter, page) => this.load(filter, page), true);
+}
+```
+
+The user returns to the filter, page and records they left; `store.set` would reset them on every visit. The trigger still reloads, so the records they see first are refreshed right after.
+
 ## Routes
 
 ```tsx

@@ -106,6 +106,7 @@ export default class extends Controller {
 }
 ```
 
+- **Seed values in `onInit` with `store.init`, not `store.set`.** Page data outlives the controller — it stays in the page's store when the user navigates away — so `init` keeps what the user left there: filter values, the current page, loaded records. `set` would reset them every time the page opens. Use `set` for values that must be fresh, such as the result of a load.
 - **Reactions** go through `this.addTrigger(name, [deps], callback, autoRun)`, not `store.subscribe` and not widget `onChange`. `autoRun: true` runs it once immediately — the usual way to load data.
 - **Derived values written to the store**: `this.addComputable(m.total, [m.items], (items) => …)`. Prefer a `computable` at the binding unless several places read the result.
 - **Clean up** timers, subscriptions and keyboard shortcuts in `onDestroy`.
