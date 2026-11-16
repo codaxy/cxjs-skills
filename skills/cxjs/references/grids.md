@@ -167,7 +167,7 @@ If `headerMode` is not set, the grid chooses on its own: `plain` when nothing is
 ## Large data sets
 
 - `buffered` renders only the visible rows and turns on `scrollable`. The grid needs a fixed height: `style="height: 400px"` or a flex layout that gives it one.
-- `cached` skips re-rendering rows whose record did not change.
+- `cached` updates a row only when its record changes. Use it only if cells bind to nothing but `$record`.
 - `mod="fixed-layout"` switches the table to `table-layout: fixed` — faster with many rows; give the columns explicit widths.
 - Set `keyField`.
 
